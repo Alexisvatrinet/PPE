@@ -14,3 +14,15 @@
     </main>
 </body>
 </html>
+<?php
+$mysqli = new mysqli("localhost", "root", "", "ppeparking");
+if ($mysqli->connect_error) {
+    die('Erreur de connexion ('.$mysqli->connect_errno.')'. $mysqli->connect_error);
+    echo"a";
+    if ($mysqli->connect_error) {
+        echo 'connexion impossible... :'.$mysqli->connect_error;
+    }
+    else {
+        echo 'connexion réussie : '.$mysqli->host_info;
+    }
+?>
