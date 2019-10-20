@@ -14,6 +14,28 @@ catch (Exception $e)
 if(!isset($_SESSION['login'])){
     header('location:Page_accueil.php');
 }
+
+if (isset($_POST['nom_proprio'])) {
+
+	// lancement de la requête
+	$sql = 'SELECT id_user,place,nom FROM user' ;
+
+	// on lance la requête (mysql_query) et on impose un message d'erreur si la requête ne se passe pas bien (or die)
+	$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
+
+	// on récupère le résultat sous forme d'un tableau
+	$data = mysql_fetch_array($req);
+
+	// on libère l'espace mémoire alloué pour cette interrogation de la base
+	mysql_free_result ($req);
+	mysql_close ();
+
+// on affiche le résultat
+	echo 'Le numéro de votre place est : '.$data['place'];
+}
+else {
+	echo '   La variable place n\'est pas déclarée';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +47,6 @@ if(!isset($_SESSION['login'])){
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header><h1>utilisateur</h1></header>
+    <header><h1>Utilisateur</h1></header>
 </body>
 </html>
