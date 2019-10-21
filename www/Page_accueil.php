@@ -33,7 +33,7 @@ if(isset($_POST['inscription'])){
     if(!empty($nom) and !empty($email) and !empty($mdp)){
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
             if(strlen($nom) <= 50){
-                $mdp = PasswordHash($mdp);
+                //$mdp = PasswordHash($mdp);
                 $TestEmail = $bdd->prepare('SELECT id_user FROM user WHERE email ="'.$email.'"');
                 if($TestEmail->rowCount() < 1){
                      $bdd->query('INSERT INTO user(nom,email,mdp) VALUES ("'.$nom.'","'.$email.'","'.$mdp.'")');

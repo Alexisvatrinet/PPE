@@ -48,5 +48,7 @@ else {
 </head>
 <body>
     <header><h1>Utilisateur</h1></header>
+
+	historique: <input type="submit" name ="historique" value="inscription" />
 </body>
 </html>
