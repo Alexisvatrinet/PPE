@@ -65,6 +65,9 @@ if(isset($_POST['login'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.css">
+    <link href="style.css" rel="stylesheet">
+
     <title>Page d'Accueil</title>
 </head>
 <body> 
@@ -76,33 +79,40 @@ if(isset($_POST['login'])){
     <?php
         if(isset($_POST['inscription'])  and isset($return)) echo $return
     ?>
-    
+    <section>
     <form action="#" method="post">
 <p>
-   nom :<input type="text" name="nom" placeholder="votre nom" />
+   <input type="text" name="nom" placeholder="Nom" />
 </p>
 <p>
-   email :<input type="email" name="email" placeholder="votre email"/>
+<input type="email" name="email" placeholder="Mail"/>
 </p>
 <p>
-   admin :<input type="text" name="admin" placeholder="votre admin"/>
+<input type="text" name="admin" placeholder="Admin"/>
 </p>
 <p>
-   mdp :<input type="password" name="mdp" placeholder="votre mdp"/>
+<input type="password" name="mdp" placeholder="Mot de passe"/>
 </p>
 <p>
-   place :<input type="text" name="place" placeholder="votre place"/>
+<input type="text" name="place" placeholder="Place"/>
 </p>
 
 <input type="submit" name ="inscription" value="inscription" />
+</section>
     <?php
         if(isset($_POST['login']) and isset($return)) echo $return;
     ?>
+    <main>
     </form>
     <form action="#" method="post">
-    <input type="email" name="email">
-    <input type="password" name="mdp">
+    <p>
+    <input type="email" placeholder="Mail" name="email">
+    </p>
+    <p>
+    <input type="password" placeholder="Mot de passe" name="mdp">
+    </p>
     <input type="submit" name ="login" value="connexion" />
     </form>
+    </main>
 </body>
 </html> 

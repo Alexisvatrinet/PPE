@@ -1,0 +1,115 @@
+/*reset*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+
+
+html,body{
+    font: 16px 'Open Sans',sans-serif;/*root*/
+    margin: 0;
+    background: #eee;
+}
+h1,
+h2,
+p,
+ul{
+    margin: 0;
+    font-weight: 300;
+    list-style-type: none;
+    padding: 0;
+    
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+*{
+    box-sizing: border-box;
+}
+/*theme*/
+:root{
+	--color-default: #ccc;
+	--color-primary: rgba(41, 128, 185,1.0);
+	--color-success: rgba(39, 174, 96,1.0);
+	--color-warning: rgba(192, 57, 43,1.0);
+}
+
+/*header*/
+header h1{
+	line-height: 65px;
+	text-align: center;
+	color: #fff;
+	font-size: 1.5rem;
+	background-color: var(--color-primary);
+	box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+header h1::before{
+	content:'\f17b';
+	font-family: 'Font Awesome 5 brands';
+	margin-right: 5px;
+	vertical-align: middle;   
+}
+/*menu nav*/
+nav{
+	background: #222;
+}
+nav ul{
+	max-width: 800px;
+	margin: 0 auto;
+	font-size: 0;
+}
+nav ul li{
+	display: inline-block;
+	background: #222;
+	width: calc(100% / 4);
+	font-size: 1rem;
+	text-align: center;
+	line-height: 45px;
+	border-right: solid 1px #fff;
+	transition: background  0.8s ease-in-out;
+	/*box-shadow: inset 0 -3px 10px rgba(107, 104, 104, 0.8);*/
+}
+nav ul li a{
+	color: #fafafa;
+	display: block;
+	text-transform: capitalize;
+	transition-duration: 0.9s;
+
+}
+nav ul li:last-child{
+	border: 0;
+}
+nav ul li:hover,.active{
+	background-color: #ccc;
+}
+nav ul li:hover a{
+	color: #222;
+}
+address{
+    max-width: 800px;
+    margin: 60px auto 10px;
+}
+section{
+    background: #ecf0f1;
+    max-width: 800px;
+    margin: 50px auto 10px;
+}
+section p{
+    padding: 5px;
+    line-height: 1px;
+}
+section h2{
+    background: var(--color-primary);
+    text-align: center;
+    color: #fafafa;
+    line-height: 45px;
+    border-radius: 8px 8px 0 0;
+}
+main{
+	max-width:900px;
+    margin: -100px auto 80px;
+    /* overflow: hidden; */
+    display: table;
+}
+main > p{
+	padding: 5px;
+	line-height: 1px;
+}
