@@ -14,11 +14,13 @@ catch (Exception $e)
 if(!isset($_SESSION['login'])){
     header('location:Page_accueil.php');
 } 
+ // Si on appuye sur le bouton
 $sql =$bdd->prepare('SELECT datereservation From place');
 $sql->execute(); //appelle la fonction
 while ($row = $sql->fetch(PDO::FETCH_ASSOC)){
 echo $row ['datereservation'];
-}
+var_dump($row);}
+
 
 	
 
@@ -36,6 +38,7 @@ echo $row ['datereservation'];
 <body>
     <header><h1>Utilisateur</h1></header>
 
-	historique: <input type="submit" name ="historique" value="historique" />
+historique: <input type="submit" name ="historique" value="historique" />
+
 </body>
 </html>
