@@ -7,6 +7,11 @@ html,body{
     margin: 0;
     background: #eee;
 }
+body{
+    letter-spacing: 1px;
+    font-family: Helvetica;
+    padding: 10px;
+}
 h1,
 h2,
 p,
